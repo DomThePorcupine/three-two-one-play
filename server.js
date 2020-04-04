@@ -2,6 +2,8 @@
 const WebSocket = require('ws');
 const UUID = require('uuid').v4;
 
+const PORT = process.env.PORT || 5000;
+
 const activeConnections = {}; // 
 
 const getNewUUID = () => {
@@ -21,7 +23,7 @@ const dispense = (sessionId, data) => {
 
 const server = new WebSocket.Server({
     host: '0.0.0.0',
-    port: 5000,
+    port: PORT,
 });
 
 server.on('connection', (socket) => {
