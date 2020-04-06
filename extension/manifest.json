@@ -7,12 +7,22 @@
     "permissions": [
         "activeTab"
     ],
-    "content_scripts": [{
-        "matches": ["https://www.disneyplus.com/video/*"],
-        "js": [
-            "index.js",
-            "ws.js",
-            "searchparams.js"
-        ]
-    }]
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.disneyplus.com/video/*"
+            ],
+            "js": [
+                "index.js",
+                "ws.js",
+                "searchparams.js"
+            ]
+        }
+    ],
+    "icons": {
+        "128": "logo.png"
+    },
+    "browser_action": {
+        "default_popup": "options.html"
+    }
 }
