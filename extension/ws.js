@@ -8,8 +8,8 @@ class WSConnection {
      * @param {string} sessionId - The id pulled from the url
      */
     constructor (sessionId) {
-        // this.serverURL = 'wss://three-two-one-play.herokuapp.com';
-        this.serverURL = 'ws://localhost:5000';
+        this.serverURL = 'wss://three-two-one-play.herokuapp.com';
+        // this.serverURL = 'ws://localhost:5000';
         this.sessionId = sessionId;
         this.server = null;
         this.state = null;
